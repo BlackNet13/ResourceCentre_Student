@@ -130,8 +130,8 @@ public class ResourceCentre {
 		String output = "";
 
 		for (int i = 0; i < camcorderList.size(); i++) {
-			if(!camcorderList.isEmpty()) {
-			//if (camcorderList.get(i).getIsAvailable()) {
+			//if(!camcorderList.isEmpty()) {
+			if (camcorderList.get(i).getIsAvailable()) {
 				output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
 					camcorderList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable()),
@@ -153,8 +153,8 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here, code written by Yvonne
 		for (int i = 0; i < chromebookList.size(); i++) {
-			if(!chromebookList.isEmpty()) {
-			//if (chromebookList.get(i).getIsAvailable()) {
+			//if(!chromebookList.isEmpty()) {
+			if (chromebookList.get(i).getIsAvailable()) {
 				output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
 					chromebookList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
