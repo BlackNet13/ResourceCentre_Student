@@ -259,10 +259,10 @@ public class ResourceCentreTest {
 				assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 				ResourceCentre.addChromebook(chromebookList, cb1);
 				Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
-				assertTrue("Test if CC0011 is successfully loaned out.", ok);
+				assertTrue("Test if CB0011 is successfully loaned out.", ok);
 				Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
 				assertTrue("Test if the return of CB0011 is successful.", isReturned);
-				assertTrue("Test that CC0011 is now available.",chromebookList.get(0).getIsAvailable());
+				assertTrue("Test that CB0011 is now available.",chromebookList.get(0).getIsAvailable());
 
 				// Test case 2: Return an item that is not loaned out
 				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
