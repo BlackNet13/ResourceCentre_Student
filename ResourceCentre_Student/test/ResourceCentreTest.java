@@ -209,7 +209,7 @@ public class ResourceCentreTest {
 				assertEquals(chromebookList.get(0).getDueDate(),"8-8-2020");
 
 				// Test Case 2 - Loan an unavailable item
-				cc2.setIsAvailable(false);
+				cb2.setIsAvailable(false);
 				ResourceCentre.addChromebook(chromebookList, cb2);
 				assertFalse("Test that there is an item not available", chromebookList.get(1).getIsAvailable());
 				ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
