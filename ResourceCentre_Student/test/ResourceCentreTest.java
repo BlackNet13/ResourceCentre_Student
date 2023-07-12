@@ -78,7 +78,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that the Chromebook arraylist size is now 2.", 2, chromebookList.size());
 		//The item just added is as same as the last item in the list
-		assertSame("Test that Camcorder is added to the end of the list.", cb2, chromebookList.get(1));
+		assertSame("Test that Chromebook is added to the end of the list.", cb2, chromebookList.get(1));
 
 		// Add an item that already exists in the list
 		ResourceCentre.addChromebook(chromebookList, cb2);
