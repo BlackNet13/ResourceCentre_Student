@@ -259,7 +259,7 @@ public class ResourceCentre {
 			return isLoaned; 
 		}
 		for(int i = 0; i < chromebookList.size(); i ++) {
-			if(tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())&& chromebookList.get(i).getIsAvailable()) {
+			if(tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())&& chromebookList.get(i).getIsAvailable()== true) {
 				
 				chromebookList.get(i).setIsAvailable(false);
 				chromebookList.get(i).setDueDate(dueDate);
