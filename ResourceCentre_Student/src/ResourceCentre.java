@@ -241,8 +241,8 @@ public class ResourceCentre {
 	}
 	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
-		String tag = Helper.readString("Enter asset tag > ");
-		String due = Helper.readString("Enter due date > ");
+		String tag = Helper.readString("Enter Asset Tag > ");
+		String due = Helper.readString("Enter Due Date (DD/MM/YYYY) > ");
 		Boolean isLoaned =doLoanCamcorder(camcorderList, tag, due);
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
@@ -273,8 +273,8 @@ public class ResourceCentre {
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here, Shou kang		
 		ResourceCentre.viewAllChromebook(chromebookList);
-		String tag = Helper.readString("Enter asset tag > ");
-		String due = Helper.readString("Enter due Date > ");
+		String tag = Helper.readString("Enter Asset Tag > ");
+		String due = Helper.readString("Enter Due Date (DD/MM/YYYY) > ");
 		boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
 		if(isLoaned == false) {
 			System.out.println("Invalid asset tag");
