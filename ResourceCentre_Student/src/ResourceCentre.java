@@ -195,13 +195,13 @@ public class ResourceCentre {
 	
 	public static Chromebook inputChromebook() {	
 		Chromebook cb =null;
-		// write your code here
+		// write your code here, Aliyah
 
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-		// write your code here
+		// write your code here, Aliyah
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
@@ -237,11 +237,11 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		// write your code here
+		// write your code here, Shou Kang
 		return true;
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here		
+		// write your code here, Shou kang		
 	}
 	
 	//================================= Option 4 Return an item (CRUD - Update)=================================
@@ -277,11 +277,11 @@ public class ResourceCentre {
 
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
-		// write your code here
+		// write your code here, ShouKang & Aliyah
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
+		// write your code here, ShouKang & Aliyah
 	}
 
 

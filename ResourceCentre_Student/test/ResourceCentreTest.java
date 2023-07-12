@@ -65,9 +65,9 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public void testAddChromebook() {
+	public void testAddChromebook() { 
 		//fail("Not yet implemented");
-		// write your code here 
+		// write your code here, Edry 
 	}
 
 	@Test
@@ -110,7 +110,7 @@ public class ResourceCentreTest {
 	@Test
 	public void testRetrieveAllChromebook() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here, Edry
 	}
 
 	@Test
@@ -145,7 +145,7 @@ public class ResourceCentreTest {
 	@Test
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here, Edry
 	}
 
 	@Test
@@ -172,7 +172,7 @@ public class ResourceCentreTest {
 	@Test
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here, Yvonne
 	}
 
 	@After
