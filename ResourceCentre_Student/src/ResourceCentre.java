@@ -321,7 +321,7 @@ public class ResourceCentre {
 		
 		if (tag.isEmpty()) {			
 			return false;
-		}
+		}else {
 		
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
@@ -330,7 +330,7 @@ public class ResourceCentre {
 				chromebookList.get(i).setDueDate("");
 				isReturned = true;				
 			}
-		}
+		}}
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
