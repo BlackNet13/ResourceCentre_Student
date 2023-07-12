@@ -202,27 +202,27 @@ public class ResourceCentreTest {
 		
 		// Test Case 1 - Loan an available Item
 				assertNotNull("test if there is valid Camcorder arraylist to loan from", chromebookList);
-				ResourceCentre.addCamcorder(camcorderList, cc1);
-				Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+				ResourceCentre.addChromebook(chromebookList, cb1);
+				Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
 				assertTrue("Test if an available item is ok to loan?", ok);
-				assertFalse(camcorderList.get(0).getIsAvailable());
-				assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");
+				assertFalse(chromebookList.get(0).getIsAvailable());
+				assertEquals(chromebookList.get(0).getDueDate(),"8-8-2020");
 
 				// Test Case 2 - Loan an unavailable item
 				cc2.setIsAvailable(false);
-				ResourceCentre.addCamcorder(camcorderList, cc2);
-				assertFalse("Test that there is an item not available", camcorderList.get(1).getIsAvailable());
-				ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020" );
+				ResourceCentre.addChromebook(chromebookList, cb2);
+				assertFalse("Test that there is an item not available", chromebookList.get(1).getIsAvailable());
+				ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
 				assertFalse("Test that the loan fails.", ok);	
 
 				// Test Case 3 - Item not found
-				ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0016", "8-8-2020" );
+				ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0016", "8-8-2020" );
 				assertFalse("Test that the loan fails.", ok);
 
 				// Test case 4 - Missing details
-				ResourceCentre.addCamcorder(camcorderList, cc3);
-				assertTrue("Test that there is an item available", camcorderList.get(2).getIsAvailable());
-				ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "" );
+				ResourceCentre.addChromebook(chromebookList, cb3);
+				assertTrue("Test that there is an item available", chromebookList.get(2).getIsAvailable());
+				ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "" );
 				assertFalse("Test that the loan fails.", ok);
 		
 		
