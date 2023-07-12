@@ -194,14 +194,29 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
 		// write your code here, Aliyah
-
-		return cb;
 		
+		String tag = Helper.readString("Enter asset tag > ") ;
+		String description = Helper.readString("Enter description > ") ;
+		String os = Helper.readString("Enter operating system > ") ;
+		
+		Chromebook cb = new Chromebook(tag, description, os) ;
+		return cb ;		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here, Aliyah
+		
+		Chromebook item ;
+		for(int i = 0; i < chromebookList.size(); i++) {
+			item = chromebookList.get(i) ;
+			if (item.getAssetTag().equalsIgnoreCase(cb.getAssetTag()) )
+				return ;
+		}
+		if ((cb.getAssetTag().isEmpty()) || (cb.getDescription().isEmpty()) ) {
+			return ;
+		}
+		
+		chromebookList.add(cb) ;
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
@@ -278,11 +293,33 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
 		// write your code here, ShouKang & Aliyah
+		
+		if (tag.isEmpty()) {			
+			return false;
+		}
+		
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
+					&& chromebookList.get(i).getIsAvailable() == false) {
+				chromebookList.get(i).setIsAvailable(true);
+				chromebookList.get(i).setDueDate("");
+				isReturned = true;				
+			}
+		}
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here, ShouKang & Aliyah
+		
+		ResourceCentre.viewAllChromebook(chromebookList) ;
+		String tag = Helper.readString("Enter asset tag > ") ;
+		Boolean isReturned = doReturnChromebook(chromebookList, tag) ;
+		
+		if (isReturned == false) {
+			System.out.println("Invalid asset tag") ;
+		} 
+		else {
+			System.out.println("Chromebook " + tag + " returned") ;
+		}
 	}
-
-
 }
